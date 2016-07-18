@@ -37,7 +37,7 @@ describe "the programmers index page" do
     expect(programmers_index).to include("<%= render @programmers %>")
   end
 end
-
+=begin
 # BONUS: Create a partial that renders a single attribute of a programmer
 xdescribe "the attribute partial" do
   let(:programmer) { FactoryGirl.create(:programmer) }
@@ -52,3 +52,4 @@ xdescribe "the attribute partial" do
   end
 
 end
+=end
