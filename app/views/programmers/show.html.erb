@@ -12,17 +12,18 @@
 
   <div class="col-md-9 programmer-info">
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
+    <!-- <%= render partial:'attribute', locals: {attribute: @programmer.send('home_country'), attr_name: 'Home Country'} %>
+    <%= render partial:'attribute', locals: {attribute: @programmer.send('quote'), attr_name: 'Quote'} %>
+    <%= render partial:'attribute', locals: {attribute: @programmer.send('claim_to_fame'), attr_name: 'Claim To Fame'} %> -->
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
+    <% @programmer.attributes.each do |attribute| %>
+      <%= render partial:'attribute',
+        locals: {
+          attribute: @programmer.send(attribute.first),
+          attr_name: attribute.first.gsub("-", " ").capitalize
+        }
+      %>
+    <% end %>
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
@@ -30,4 +31,3 @@
 
   </div>
 </div>
-

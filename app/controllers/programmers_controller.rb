@@ -1,3 +1,4 @@
+require 'pry'
 class ProgrammersController < ApplicationController
   def index
     @programmers = Programmer.all
