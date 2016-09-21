@@ -12,21 +12,14 @@
 
   <div class="col-md-9 programmer-info">
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
+    <%= render 'attribute', title: "Home Country", attribute: @programmer.home_country %>   
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
+    <%= render 'attribute', title: "Quote", attribute: @programmer.quote %>   
+    
+    <%= render 'attribute', title: "Claim To Fame", attribute: @programmer.claim_to_fame %>   
 
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
 
-    <p>
-    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
-    </p>
+    <%= render 'learn_more', programmer: @programmer %>    
 
   </div>
 </div>
