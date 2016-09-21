@@ -12,11 +12,12 @@
 
   <div class="col-md-9 programmer-info">
 
-    <%= render 'home_country', programmer: @programmer %>
+    <%= render 'attribute', title: "Home Country", attribute: @programmer.home_country %>   
 
-    <%= render 'quote', programmer: @programmer %>    
+    <%= render 'attribute', title: "Quote", attribute: @programmer.quote %>   
+    
+    <%= render 'attribute', title: "Claim To Fame", attribute: @programmer.claim_to_fame %>   
 
-    <%= render 'claim_to_fame', programmer: @programmer %>    
 
     <%= render 'learn_more', programmer: @programmer %>    
 
