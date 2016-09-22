@@ -1,0 +1,12 @@
+<p>
+<strong>Home Country:</strong> <%= programmer.home_country %>
+</p>
+
+
+
+<% programmer.attribute_names do |name| %>
+<p>
+<strong><%= name.split("_").map(&:capitalize).join(' ') %>:</strong> <%= programmer.name %><br>
+</p>
+
+<% end %>
