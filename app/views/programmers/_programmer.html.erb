@@ -1,0 +1,10 @@
+<ul class="list-group">
+<%# <% programmer.each do |programmer| %1> %>
+  <%= link_to programmer_path(programmer) do %>
+  <p class="list-group-item programmer-item">
+    <%= image_tag programmer.image, width: '70px' %>
+    <%= programmer.name %>
+  </p>
+  <%# <% end %1> %>
+<% end %>
+</ul>
